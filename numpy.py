@@ -1,24 +1,37 @@
 import numpy as np
-# initialize arrays
-a= np.array([1,2,3],dtype='int16')
-print(a);
-b=np.array([[1.0,2.0,3.0],[2.0,4.5,6.7]])
-print(b);
+#Accessing / Chnaging
 
 
-#getting dimension ans shape
-print(a.ndim)
-print (b.ndim)
-print(a.shape)
-print(b.shape)
+a=np.array([[1,2,3,4,5,6],[7,8,9,10,11,12]])
+print(a)
 
 
-# Get type
-print(a.dtype)
+#getting specific element (r,c)
+print(a[1,5])
 
-#get size
-print(a.size)
-#get itemsize
-print(a.itemsize)
-#total size
-print(b.nbytes)
+
+#Getting a spcefic row
+
+print(a[0,:])
+
+
+#Getting a specefi column
+
+print(a[:,3])
+
+
+
+# Getting every other element of first row
+
+print(a[0,1:6:2])
+
+#Changing element
+a[1,5]=14
+a[:,3]=[1,2]
+print(a)
+
+#3d element
+b=np.array([[[1,2],[3,4]],[[5,6],[7,8]]])
+print(b)
+
+print(b[:,:,0])
